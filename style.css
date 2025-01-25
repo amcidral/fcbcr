@@ -1,0 +1,236 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #3a3a3a, #000000);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.logo-large {
+    width: 80px;
+    height: auto;
+}
+
+.logo-small {
+    width: 40px;
+    height: auto;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.team-button {
+    background-color: #2980b9;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.team-button:hover {
+    background-color: #3498db;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+.atletas-container, .quadra-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.atleta-card {
+    background-color: #888686;
+    border-radius: 12px;
+    width: 160px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.atleta-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.atleta-card:hover {
+    transform: scale(1.05);
+}
+
+.action-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons button {
+    background-color: #e74c3c;
+    padding: 5px 10px;
+}
+
+.action-buttons button.edit {
+    background-color: #2980b9;
+}
+
+.action-buttons button.finish-edit {
+    background-color: #27ae60;
+}
+
+.action-buttons button:hover {
+    opacity: 0.9;
+}
+
+#admin-section {
+    display: none;
+    width: 100%;
+    max-width: 800px;
+}
+
+#choose-team-section {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Modal de confirmação */
+#confirm-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+#confirm-modal .modal-content {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+#confirm-modal button {
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#confirm-modal button.cancel {
+    background-color: #95a5a6;
+}
+
+#confirm-modal button.confirm {
+    background-color: #27ae60;
+}
+
+.score {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.score.red {
+    color: red;
+}
+
+.score.warning {
+    color: red;
+    font-size: 2rem;
+}
+
+/* Box de limite de atletas */
+.LIMITE_ATLETAS {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: none;
+    text-align: center;
+}

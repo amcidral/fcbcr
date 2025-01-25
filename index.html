@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolher Time e Administrar Atletas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="choose-team-section">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=196,fit=crop,q=95/YNqOOO8wN9uwD6gD/logo-fcbcr-mjEPPPDo6yfQLqbM.png" alt="Logo FCBCR" class="logo-large">
+        <div class="title">
+            Escolha um Time para Administrar
+        </div>
+        <div class="team-list">
+            <button class="team-button" onclick="entrarNoTime('time1')">Time 1</button>
+            <button class="team-button" onclick="entrarNoTime('time2')">Time 2</button>
+            <button class="team-button" onclick="entrarNoTime('time3')">Time 3</button>
+            <button class="team-button" onclick="entrarNoTime('time4')">Time 4</button>
+            <button class="team-button" onclick="entrarNoTime('time5')">Time 5</button>
+            <button class="team-button" onclick="entrarNoTime('time6')">Time 6</button>
+        </div>
+    </div>
+
+    <div id="admin-section">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=196,fit=crop,q=95/YNqOOO8wN9uwD6gD/logo-fcbcr-mjEPPPDo6yfQLqbM.png" alt="Logo FCBCR" class="logo-small">
+        <h1>Administração do Time</h1>
+        <div id="team-info" class="team-info"></div>
+
+        <div class="form-group">
+            <label for="nome">Nome do Atleta:</label>
+            <input type="text" id="nome" required>
+        </div>
+        <div class="form-group">
+            <label for="numero">Número do Atleta:</label>
+            <input type="number" id="numero" required>
+        </div>
+        <div class="form-group">
+            <label for="classe">Classe Funcional:</label>
+            <select id="classe" required>
+                <option value="1.0">Classe 1.0</option>
+                <option value="1.5">Classe 1.5</option>
+                <option value="2.0">Classe 2.0</option>
+                <option value="2.5">Classe 2.5</option>
+                <option value="3.0">Classe 3.0</option>
+                <option value="3.5">Classe 3.5</option>
+                <option value="4.0">Classe 4.0</option>
+                <option value="4.5">Classe 4.5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="foto">Foto do Atleta:</label>
+            <input type="file" id="foto" accept="image/*">
+        </div>
+        <button onclick="adicionarAtleta()">Adicionar Atleta</button>       <button id="finishEditButton" style="display:none;" onclick="finalizarEdicao()">Finalizar Edição</button>
+
+        <div class="section-title">Atletas do Time</div> <br><br>
+        <div class="atletas-container" id="atletas-container"></div>
+
+                <!-- Seção dos Atletas em Quadra -->
+                <div class="section-title">Atletas em Quadra</div> <br><br>
+                <div class="quadra-container" id="quadra-container"></div>
+        
+                <!-- Contagem de Pontos do Time -->
+                <div id="score-container">
+                    <div class="score" id="score">Pontos: 0</div>
+                </div>
+
+        <br><button onclick="voltarParaEscolha()">Voltar para Escolher Time</button>
+    </div>
+
+    <div id="confirm-modal">
+        <div class="modal-content">
+            <p>Tem certeza de que deseja remover este atleta?</p>
+            <div>
+                <button class="cancel" onclick="fecharModal()">Cancelar</button>
+                <button class="confirm" onclick="confirmarRemocao()">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
